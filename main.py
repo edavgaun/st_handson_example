@@ -85,14 +85,24 @@ st.set_page_config(page_title="Switchbacks Dashboard", layout="wide")
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col1:
-    st.image("data_files/Uber-logo.png", width=120)
+    st.markdown(
+        "<div style='text-align: center;'>
+            <img src='data_files/Uber-logo.png' width='120'>
+        </div>",
+        unsafe_allow_html=True
+    )
 
 with col2:
     st.markdown("<h1 style='text-align: center;'>📊 HBR - UBER Case Study Dashboard</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center;'>A simple dashboard built from a multi-sheet Excel file.</p>", unsafe_allow_html=True)
 
 with col3:
-    st.image("data_files/Uber-logo.png", width=120)
+    st.markdown(
+        "<div style='text-align: center;'>
+            <img src='data_files/rice-logo.jpg' width='120'>
+        </div>",
+        unsafe_allow_html=True
+    )
 
 # ---- Tabs ----
 
