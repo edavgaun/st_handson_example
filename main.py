@@ -136,6 +136,7 @@ with tab3:
 
         # Dropdown menu for period selection
         period = st.selectbox("Select period:", ["week", "month"])
+        st.write(period)
         
         # Pass the same slice to pie_chart
         pie_chart(time_data, period)
