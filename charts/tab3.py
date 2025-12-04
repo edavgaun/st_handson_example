@@ -52,11 +52,8 @@ def pie_chart(df, period):
     elif period == 'month':
         df['label'] = df['period_start'].dt.month_name()
     
-    # Aggregate payouts per label
-    df_agg = df.groupby('label', as_index=False)['total_driver_payout'].sum()
-    
     # Create pie chart
-    fig = px.pie(df_agg, names='label', values='total_driver_payout', title=f'Total Payouts per {period}')
+    fig = px.pie(df, names='label', values='total_driver_payout', title=f'Total Payouts per {period}')
     
     # Display in Streamlit
     st.plotly_chart(fig)
