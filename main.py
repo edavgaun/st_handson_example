@@ -53,7 +53,7 @@ def tab_dictionary(data):
 
 def tab_data(data):
     """Show the Switchbacks sheet."""
-
+    st.caption('💽 Data')
     df = data["Switchbacks"].drop(columns='city_id')
 
     # --- Double integer slider to select row range ---
