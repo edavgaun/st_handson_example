@@ -65,7 +65,7 @@ def tab_data(data):
         "Select row range to display",
         min_value=0,
         max_value=len(df),
-        value=(0, min(5, len(df))),  # default: first 20 rows
+        value=(0, 5),
         step=1
     )
 
