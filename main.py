@@ -4,6 +4,8 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+from charts.tab3 import time_series
+
 # -----------------------------
 # DATA LOADING FUNCTIONS
 # -----------------------------
@@ -117,3 +119,4 @@ with tab2:
 
 with tab3:
     tab_data(data)
+    time_series(data)
