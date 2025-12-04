@@ -82,7 +82,7 @@ def tab_data(data):
 # MAIN APP LAYOUT
 # -----------------------------
 
-st.title("🏔️ Switchbacks Dashboard")
+st.title("📊 HBR - UBER Case Study Dashboard")
 st.markdown("A simple dashboard built from a multi-sheet Excel file.")
 
 tab1, tab2, tab3 = st.tabs(["Metadata", "Dictionary", "Data"])
