@@ -102,7 +102,7 @@ with col3:
     st.markdown(
         """
         <div style='text-align: center;'>
-            <img src='https://raw.githubusercontent.com/edavgaun/st_handson_example/refs/heads/main/data_files/rice-logo.jpg' width='120'>
+            <img src='https://raw.githubusercontent.com/edavgaun/st_handson_example/refs/heads/main/data_files/rice-logo.jpg' width='240'>
         </div>
         """,
         unsafe_allow_html=True
