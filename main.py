@@ -69,6 +69,7 @@ def tab_data(data):
     )
 
     st.dataframe(df.iloc[start:end], use_container_width=True, height=250)
+    return df.iloc[start:end]
 
 
 # -----------------------------
@@ -115,5 +116,5 @@ with tab2:
     tab_dictionary(data)
 
 with tab3:
-    tab_data(data)
-    time_series(data)
+    time_data = tab_data(data)
+    time_series(time_data)
