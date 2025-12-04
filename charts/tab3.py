@@ -7,10 +7,6 @@ def time_series(data):
 
     st.header("📈 Time Series of Uber Trips in Boston")
 
-    if "Switchbacks" not in data:
-        st.warning("No 'Switchbacks' sheet found.")
-        return
-
     df = data["Switchbacks"].copy()
     df['period_start'] = pd.to_datetime(df['period_start'])
 
