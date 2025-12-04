@@ -134,4 +134,4 @@ with tab3:
     with col3:
         st.subheader("Plot 2")   
         # Pass the same slice to pie_chart
-        pie_chart(time_data, period)
+        pie_chart(time_data)
