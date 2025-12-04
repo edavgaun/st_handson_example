@@ -8,13 +8,9 @@ import matplotlib.pyplot as plt
 # DATA LOADING FUNCTIONS
 # -----------------------------
 
-#data_url = 'https://docs.google.com/spreadsheets/d/1fTpJACr1Ay6DEIgFxjFZF8LgEPiwwAFY/edit?usp=sharing&ouid=103457517634340619188&rtpof=true&sd=true'
 data_url = "data_files/data.xlsx"
 
 def load_file(path):
-    # Make URL pandas-friendly
-    # modified_url = data_url.replace('/edit?usp=sharing', '/export?format=xlsx')
-
     # Load ALL sheets
     all_sheets = pd.read_excel(path, sheet_name=None)
 
