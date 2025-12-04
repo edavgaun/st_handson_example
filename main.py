@@ -130,7 +130,6 @@ with tab3:
         st.subheader("Time Series")
         # Pass the same slice to time_series
         time_series(time_data)
-        time_series(time_data, period)
 
     with col3:
         st.subheader("Earnings Distribution")
