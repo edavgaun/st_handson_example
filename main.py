@@ -119,7 +119,7 @@ with tab3:
     st.header("📊 Data and Time Series")
 
     # Create three columns: left for the table, center for the timeseries, right for the pie chart
-    col1, col2, col3 = st.columns([1, 3, 1.5])
+    col1, col2, col3 = st.columns([1, 3, 2])
 
     with col1:
         st.subheader("Data Preview")
