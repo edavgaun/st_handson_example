@@ -69,7 +69,7 @@ def tab_data(data):
         step=1
     )
 
-    st.dataframe(data["Switchbacks"], use_container_width=True)
+    st.dataframe(df.iloc[start:end], use_container_width=True)
 
 
 # -----------------------------
