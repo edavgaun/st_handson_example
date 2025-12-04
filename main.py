@@ -58,11 +58,13 @@ def tab_data(data):
 
     st.subheader("Switchbacks Sheet")
 
+    df = data["Switchbacks"]
+
     # --- Double integer slider to select row range ---
     start, end = st.slider(
         "Select row range to display",
         min_value=0,
-        max_value=len(df),
+        max_value=len(),
         value=(0, min(20, len(df))),  # default: first 20 rows
         step=1
     )
