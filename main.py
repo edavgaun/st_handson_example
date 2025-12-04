@@ -69,7 +69,7 @@ def tab_data(data):
         step=1
     )
 
-    st.dataframe(df.iloc[start:end], use_container_width=True, height=300)
+    st.dataframe(df.iloc[start:end], use_container_width=True, height=250)
 
 
 # -----------------------------
