@@ -53,9 +53,6 @@ def tab_dictionary(data):
 
 def tab_data(data):
     """Show the Switchbacks sheet."""
-    st.header("📊 Data Preview")
-
-    st.subheader("Switchbacks Sheet")
 
     df = data["Switchbacks"].drop(columns='city_id')
 
