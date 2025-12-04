@@ -79,8 +79,22 @@ def tab_data(data):
 # MAIN APP LAYOUT
 # -----------------------------
 
-st.title("📊 HBR - UBER Case Study Dashboard")
-st.markdown("A simple dashboard built from a multi-sheet Excel file.")
+st.set_page_config(page_title="Switchbacks Dashboard", layout="wide")
+
+# ---- HEADER WITH LEFT + RIGHT LOGOS ----
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col1:
+    st.image("data_files/Uber-logo.png", width=120)
+
+with col2:
+    st.markdown("<h1 style='text-align: center;'>📊 HBR - UBER Case Study Dashboard</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>A simple dashboard built from a multi-sheet Excel file.</p>", unsafe_allow_html=True)
+
+with col3:
+    st.image("data_files/Uber-logo.png", width=120)
+
+# ---- Tabs ----
 
 tab1, tab2, tab3 = st.tabs(["Metadata", "Dictionary", "Data"])
 
