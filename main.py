@@ -65,11 +65,11 @@ def tab_data(data):
         "Select row range to display",
         min_value=0,
         max_value=len(df),
-        value=(0, 5),
+        value=(0, len(df)),
         step=1
     )
 
-    st.dataframe(df.iloc[start:end], use_container_width=True)
+    st.dataframe(df.iloc[start:end], use_container_width=True, height=300)
 
 
 # -----------------------------
