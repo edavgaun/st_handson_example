@@ -122,7 +122,6 @@ with tab3:
     col1, col2, col3 = st.columns([1, 3, 2])
 
     with col1:
-        st.subheader("Data Preview")
         # Get the data slice (tab_data returns the sliced DataFrame)
         time_data = tab_data(data)  
 
