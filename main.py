@@ -116,5 +116,17 @@ with tab2:
     tab_dictionary(data)
 
 with tab3:
-    time_data = tab_data(data)
-    time_series(time_data)
+    st.header("📊 Data and Time Series")
+
+    # Create two columns: left for the table, right for the chart
+    col1, col2 = st.columns([1, 1])  # equal width; adjust ratio if needed
+
+    with col1:
+        st.subheader("Data Preview")
+        # Get the data slice (tab_data returns the sliced DataFrame)
+        time_data = tab_data(data)  
+
+    with col2:
+        st.subheader("Time Series")
+        # Pass the same slice to time_series
+        time_series(time_data)
