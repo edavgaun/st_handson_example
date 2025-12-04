@@ -49,7 +49,7 @@ def pie_chart(df, period):
     elif period == 'month':
         df['label'] = df['period_start'].dt.month_name()
 
-    st.write(df.dtypes)
+    st.write(df.columns)
     
     # Create pie chart
     fig = px.pie(df, names='label', values='total_driver_payout', title=f'Total Payouts per {period}')
