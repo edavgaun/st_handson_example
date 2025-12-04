@@ -46,7 +46,7 @@ def time_series(df):
 def pie_chart(df):
     st.header("💰 Earnings Pie Chart")
 
-    period = 
+    period = st.selectbox("Select period:", ["week", "month"])
     
     # Create label column
     if period == 'week':
