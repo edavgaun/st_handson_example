@@ -68,7 +68,7 @@ def tab_data(data):
         step=1
     )
 
-    st.dataframe(df.iloc[start:end], use_container_width=True, height=500)
+    st.dataframe(df.iloc[start:end], use_container_width=True, height=400)
     return df.iloc[start:end]
 
 
@@ -119,7 +119,7 @@ with tab3:
     st.header("📊 Data and Time Series")
 
     # Create two columns: left for the table, right for the chart
-    col1, col2 = st.columns([1, 2])  # equal width; adjust ratio if needed
+    col1, col2 = st.columns([1, 3])  # equal width; adjust ratio if needed
 
     with col1:
         st.subheader("Data Preview")
