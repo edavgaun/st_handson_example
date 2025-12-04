@@ -2,12 +2,11 @@ import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
 
-def time_series(data):
+def time_series(df):
     """Streamlit tab showing a time series of Uber metrics in Boston."""
 
     st.header("📈 Time Series of Uber Trips in Boston")
 
-    df = data["Switchbacks"].copy()
     df['period_start'] = pd.to_datetime(df['period_start'])
 
     # Optional: let user select which metrics to display
