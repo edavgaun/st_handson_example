@@ -33,10 +33,6 @@ def tab_metadata(data):
     """Show the metadata extracted from the 'Copyright' sheet."""
     st.header("📄 Metadata")
 
-    if "Copyright" not in data:
-        st.warning("No 'Copyright' sheet found.")
-        return
-
     # Build the metadata text
     lines = [row[0] for row in data["Copyright"].dropna().values.tolist()]
     text = "\n".join(lines)
@@ -47,10 +43,6 @@ def tab_metadata(data):
 def tab_dictionary(data):
     """Show the cleaned data dictionary."""
     st.header("📘 Data Dictionary")
-
-    if "Data Dictionary" not in data:
-        st.warning("No 'Data Dictionary' sheet found.")
-        return
 
     headers = data['Data Dictionary'].iloc[1, :].values.tolist()
     df = data['Data Dictionary'].iloc[2:, :]
@@ -64,15 +56,18 @@ def tab_data(data):
     """Show the Switchbacks sheet."""
     st.header("📊 Data Preview")
 
-    if "Switchbacks" not in data:
-        st.warning("No 'Switchbacks' sheet found.")
-        return
-
     st.subheader("Switchbacks Sheet")
-    st.dataframe(data["Switchbacks"], use_container_width=True)
 
-    # Placeholder for visuals later
-    st.info("Visualizations will be added here in the next step.")
+    # --- Double integer slider to select row range ---
+    start, end = st.slider(
+        "Select row range to display",
+        min_value=0,
+        max_value=len(df),
+        value=(0, min(20, len(df))),  # default: first 20 rows
+        step=1
+    )
+
+    st.dataframe(data["Switchbacks"], use_container_width=True)
 
 
 # -----------------------------
