@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-from charts.tab3 import time_series
+from charts.tab3 import time_series, pie_chart
 
 # -----------------------------
 # DATA LOADING FUNCTIONS
@@ -118,8 +118,8 @@ with tab2:
 with tab3:
     st.header("📊 Data and Time Series")
 
-    # Create two columns: left for the table, right for the chart
-    col1, col2 = st.columns([1, 3])  # equal width; adjust ratio if needed
+    # Create three columns: left for the table, center for the timeseries, right for the pie chart
+    col1, col2, col3 = st.columns([1, 3, 1.5])
 
     with col1:
         st.subheader("Data Preview")
@@ -130,3 +130,13 @@ with tab3:
         st.subheader("Time Series")
         # Pass the same slice to time_series
         time_series(time_data)
+        time_series(time_data, period)
+
+    with col3:
+        st.subheader("Earnings Distribution")
+
+        # Dropdown menu for period selection
+        period = st.selectbox("Select period:", ["week", "month"])
+        
+        # Pass the same slice to pie_chart
+        pie_chart(time_data, period)
