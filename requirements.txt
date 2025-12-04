@@ -7,11 +7,8 @@ pandas
 # Numerical computations
 numpy
 
-# Plotting backend
-matplotlib
-
-# Statistical visualizations
-seaborn
+# Data Visualization
+plotly
 
 # Required for pandas to read Excel (.xlsx) files
 openpyxl
