@@ -86,9 +86,11 @@ col1, col2, col3 = st.columns([1, 2, 1])
 
 with col1:
     st.markdown(
-        "<div style='text-align: center;'>
+        """
+        <div style='text-align: center;'>
             <img src='data_files/Uber-logo.png' width='120'>
-        </div>",
+        </div>
+        """,
         unsafe_allow_html=True
     )
 
@@ -98,9 +100,11 @@ with col2:
 
 with col3:
     st.markdown(
-        "<div style='text-align: center;'>
+        """
+        <div style='text-align: center;'>
             <img src='data_files/rice-logo.jpg' width='120'>
-        </div>",
+        </div>
+        """,
         unsafe_allow_html=True
     )
 
