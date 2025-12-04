@@ -127,12 +127,12 @@ with tab3:
         time_data = tab_data(data)  
 
     with col2:
-        st.subheader("Time Series")
+        st.subheader("Plot 1")
         # Pass the same slice to time_series
         time_series(time_data)
 
     with col3:
-        st.subheader("Earnings Distribution")
+        st.subheader("Plot 2")
 
         # Dropdown menu for period selection
         period = st.selectbox("Select period:", ["week", "month"])
