@@ -79,7 +79,7 @@ def tab_data(data):
 st.set_page_config(page_title="Switchbacks Dashboard", layout="wide")
 
 # ---- HEADER WITH LEFT + RIGHT LOGOS ----
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns([1, 2, 1.5])
 
 with col1:
     st.markdown(
