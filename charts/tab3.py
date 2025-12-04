@@ -41,3 +41,21 @@ def time_series(df):
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+def pie_chart(data, period):
+    df = data["Switchbacks"].copy()
+    
+    # Create label column
+    if period == 'week':
+        df['label'] = df['period_start'].dt.day_name()
+    elif period == 'month':
+        df['label'] = df['period_start'].dt.month_name()
+    
+    # Aggregate payouts per label
+    df_agg = df.groupby('label', as_index=False)['total_driver_payout'].sum()
+    
+    # Create pie chart
+    fig = px.pie(df_agg, names='label', values='total_driver_payout', title=f'Total Payouts per {period}')
+    
+    # Display in Streamlit
+    st.plotly_chart(fig)
