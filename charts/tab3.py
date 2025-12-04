@@ -43,8 +43,10 @@ def time_series(df):
 
     st.plotly_chart(fig, use_container_width=True)
 
-def pie_chart(df, period):
+def pie_chart(df):
     st.header("💰 Earnings Pie Chart")
+
+    period = 
     
     # Create label column
     if period == 'week':
